@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ammar.blooddonation.MainActivity">
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="368dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:tabBackground="@drawable/tab_color_selector"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabs"
+        tools:ignore="RtlHardcoded" />
+
+
+    <!--
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/blood_compatibility_form"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="107dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+
+            android:onClick="BloodRequest"
+            android:text="@string/request_for_blood"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintHorizontal_bias="0.545"
+            app:layout_constraintLeft_toLeftOf="@+id/button2"
+            app:layout_constraintRight_toRightOf="@+id/button2" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nearby_blood_banks"
+            app:layout_constraintRight_toRightOf="@+id/button3"
+            app:layout_constraintLeft_toLeftOf="@+id/button3"
+            app:layout_constraintHorizontal_bias="0.512"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/button3" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nearby_available_donors"
+            app:layout_constraintRight_toRightOf="@+id/button7"
+            app:layout_constraintLeft_toLeftOf="@+id/button7"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/button7" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/donation_history"
+            app:layout_constraintRight_toRightOf="@+id/button6"
+            app:layout_constraintLeft_toLeftOf="@+id/button6"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/button6" />
+
+        <Button
+            android:id="@+id/btnBloodRequired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="53dp"
+            android:onClick="BloodRequired"
+            android:text="@string/blood_required"
+            app:layout_constraintBottom_toTopOf="@+id/button5"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintLeft_toLeftOf="@+id/button5"
+            app:layout_constraintRight_toRightOf="@+id/button5"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+            -->
+</android.support.constraint.ConstraintLayout>

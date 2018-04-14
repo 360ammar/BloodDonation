@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "851426620098",
+    "firebase_url": "https://blooddonation-dbdeb.firebaseio.com",
+    "project_id": "blooddonation-dbdeb",
+    "storage_bucket": "blooddonation-dbdeb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851426620098:android:a6cb8220e1eeadf4",
+        "android_client_info": {
+          "package_name": "com.example.ammar.blooddonation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851426620098-6fsevobbm8g6a9eqttrgp72ugmisplvs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC80vnq8F2fAqqkMB_tq02fkhuEGeO5yco"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

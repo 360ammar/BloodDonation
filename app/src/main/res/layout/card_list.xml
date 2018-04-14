@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_xs"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/spacing_xs">
+
+        <LinearLayout
+            android:id="@+id/topContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/buttons"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottomborder"
+                android:orientation="vertical"
+                android:padding="@dimen/spacing_xl">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@android:dimen/app_icon_size"
+                        android:adjustViewBounds="true"
+                        android:contentDescription="@string/profile_image"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/ic_launcher" />
+
+                    <!--   <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/profile_image"
+                        android:layout_toLeftOf="@+id/like_container"
+                        android:layout_toRightOf="@+id/profile_image"
+                        android:layout_toStartOf="@+id/like_container"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingStart="5dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/name"
+                            android:textStyle="bold" />
+
+                    <TextView
+                            android:id="@+id/date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/username"
+                            android:textColor="@color/gray"
+                            android:textSize="@dimen/textsize_xs" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/like_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="5dp"
+                        android:paddingStart="5dp"
+                        tools:ignore="RtlSymmetry">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/profile_image"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_action_thumbs_up" />
+
+                       <TextView
+                            android:id="@+id/like_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:paddingStart="5dp"
+                            android:text=""
+                            android:textColor="@color/dim_gray"
+                            android:textSize="@dimen/textsize_s" />
+                    </LinearLayout> -->
+
+
+                    <LinearLayout
+
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/profile_image"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/activity_vertical_margin"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/message"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0dip"
+                            android:autoLink="web"
+                            android:hint="@string/message"
+                            android:textAppearance="?android:textAppearanceSmall"
+                            android:textColorLink="@color/link_color"
+                            android:textDirection="locale"
+                            android:textSize="@dimen/textsize_s" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/textsize_xs" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_toEndOf="@+id/topContent">
+
+                <LinearLayout
+                    android:id="@+id/buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottomborder"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/AcceptRequest"
+                                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Accept"
+                                android:textColor="@color/accent_material_light" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottomborder"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/RejectRequest"
+                                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Reject"
+                                android:textColor="@color/accent_material_light" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/bottomborder"
+                            android:orientation="vertical">
+
+                            <Button
+                                android:id="@+id/ShareRequest"
+                                style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Share"
+                                android:textColor="@color/accent_material_light" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

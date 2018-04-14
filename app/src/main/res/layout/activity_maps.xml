@@ -1,0 +1,207 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ammar.blooddonation.MapsActivity" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/request_layout"
+                android:layout_width="350dp"
+                android:layout_height="192dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                map:layout_constraintBottom_toTopOf="@+id/btnRequest"
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintVertical_bias="0.954">
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        map:layout_constraintBottom_toBottomOf="parent"
+                        map:layout_constraintHorizontal_bias="1.0"
+                        map:layout_constraintLeft_toLeftOf="parent"
+                        map:layout_constraintRight_toLeftOf="@+id/request"
+                        map:layout_constraintTop_toBottomOf="@+id/phoneRequest"
+                        map:layout_constraintVertical_bias="1.0" />
+
+                    <EditText
+                        android:id="@+id/nameRequest"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="textPersonName"
+                        android:text="Name"
+                        map:layout_constraintBottom_toTopOf="@+id/ccpSpin"
+                        map:layout_constraintHorizontal_bias="0.0"
+                        map:layout_constraintLeft_toLeftOf="parent"
+                        map:layout_constraintRight_toRightOf="parent"
+                        map:layout_constraintTop_toTopOf="parent"
+                        map:layout_constraintVertical_bias="0.275" />
+
+                    <EditText
+                        android:id="@+id/code"
+                        android:layout_width="42dp"
+                        android:layout_height="47dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="8dp"
+                        android:ems="10"
+                        android:hint="333"
+                        android:inputType="number"
+                        android:singleLine="false"
+                        map:layout_constraintBottom_toTopOf="@+id/spinner3"
+                        map:layout_constraintHorizontal_bias="1.0"
+                        map:layout_constraintLeft_toRightOf="@+id/ccpSpin"
+                        map:layout_constraintRight_toLeftOf="@+id/phoneRequest"
+                        map:layout_constraintTop_toBottomOf="@+id/nameRequest"
+                        map:layout_constraintVertical_bias="0.0" />
+
+                    <EditText
+                        android:id="@+id/phoneRequest"
+                        android:layout_width="89dp"
+                        android:layout_height="48dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="1234567"
+                        android:inputType="phone"
+                        map:layout_constraintBottom_toTopOf="@+id/request"
+                        map:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginTop="8dp"
+                        map:layout_constraintTop_toBottomOf="@+id/nameRequest"
+                        map:layout_constraintVertical_bias="0.0" />
+
+                    <Button
+                        android:id="@+id/request"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-24dp"
+                        android:layout_marginRight="33dp"
+                        android:layout_weight="1"
+                        android:onClick="requestBlood"
+                        android:text="Request"
+                        map:layout_constraintBottom_toBottomOf="parent"
+                        map:layout_constraintRight_toRightOf="parent" />
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccpSpin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginBottom="58dp"
+                        android:layout_marginLeft="16dp"
+                        map:layout_constraintBottom_toTopOf="@+id/spinner3"
+                        map:layout_constraintLeft_toLeftOf="parent" />
+
+                </android.support.constraint.ConstraintLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="54dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="54dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:onClick="LoginAction"
+                android:text="Login"
+                map:layout_constraintBottom_toTopOf="@+id/btnRequest"
+                map:layout_constraintHorizontal_bias="0.314"
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintVertical_bias="0.029" />
+
+            <Button
+                android:id="@+id/btnRequest"
+                android:layout_width="193dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:onClick="RequestAction"
+                android:text="Request for Blood"
+                map:layout_constraintBottom_toBottomOf="parent"
+                map:layout_constraintHorizontal_bias="0.502"
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintRight_toRightOf="parent" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="68dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:onClick="RegisterAction"
+                android:text="Sign Up"
+                map:layout_constraintBottom_toTopOf="@+id/btnRequest"
+                map:layout_constraintHorizontal_bias="0.689"
+                map:layout_constraintLeft_toLeftOf="parent"
+                map:layout_constraintRight_toRightOf="parent"
+                map:layout_constraintTop_toTopOf="parent"
+                map:layout_constraintVertical_bias="0.029" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>
